@@ -10,6 +10,7 @@
     "require": {
         "php": "^8.2",
         "filament/filament": "^3.2",
+        "filament/spatie-laravel-translatable-plugin": "^3.2",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9"
     },
@@ -65,6 +66,6 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
