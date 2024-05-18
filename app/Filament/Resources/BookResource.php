@@ -30,6 +30,7 @@ class BookResource extends Resource
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('cover')
+                    ->required()
                     ->image()
             ]);
     }
