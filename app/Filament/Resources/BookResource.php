@@ -6,6 +6,9 @@ use App\Filament\Resources\BookResource\Pages;
 use App\Filament\Resources\BookResource\RelationManagers;
 use App\Models\Book;
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Resource;
@@ -26,12 +29,16 @@ class BookResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
+                TextInput::make('title')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\FileUpload::make('cover')
+                FileUpload::make('cover')
                     ->required()
-                    ->image()
+                    ->image(),
+                Repeater::make('authors')
+                    ->schema([
+                        TextInput::make('name')
+                    ]),
             ]);
     }
 
