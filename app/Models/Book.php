@@ -11,8 +11,12 @@ class Book extends Model
     use HasFactory;
     use HasTranslations;
 
-    public $translatable = ['title'];
+    public $translatable = ['title', 'cover', 'authors'];
 
     protected $guarded = [];
+
+    /*protected $casts = [
+        'authors' => 'array'
+    ];*/
 
 }
