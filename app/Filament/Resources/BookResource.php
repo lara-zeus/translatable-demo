@@ -14,8 +14,6 @@ use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class BookResource extends Resource
 {
@@ -29,22 +27,34 @@ class BookResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\Section::make('meta')
+                    ->relationship('meta')
+                    ->schema([
+                        TextInput::make('title'),
+                    ]),
+
+
+
                 TextInput::make('title')
                     ->required()
                     ->columnSpanFull(),
                 FileUpload::make('cover')
-                    ->required()
+//                    ->required()
                     ->image(),
                 Repeater::make('authors')
                     ->schema([
                         TextInput::make('name')
                     ]),
+
+
+
             ]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
+            ->defaultSort('id', 'desc')
             ->columns([
                 Tables\Columns\TextColumn::make('title'),
             ])

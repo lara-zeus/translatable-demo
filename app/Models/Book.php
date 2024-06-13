@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Spatie\Translatable\HasTranslations;
 
 class Book extends Model
@@ -18,5 +19,10 @@ class Book extends Model
     /*protected $casts = [
         'authors' => 'array'
     ];*/
+
+    public function meta(): HasOne
+    {
+        return $this->hasOne(Meta::class);
+    }
 
 }

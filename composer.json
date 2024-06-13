@@ -70,8 +70,8 @@
     "prefer-stable": true,
     "repositories": [
         {
-            "type": "github",
-            "url": "https://github.com/lara-zeus/translatable"
+            "type": "path",
+            "url": "../../zeus/p/translatable"
         }
     ]
 }
