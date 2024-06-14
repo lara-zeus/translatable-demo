@@ -17,3 +17,11 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+composer-local.json
+.phpstorm.meta.php
+_ide_helper.php
+*.log
+*.swp
+.DS_Store
+vite.config.js.timestamp-*
+.phpunit.cache
