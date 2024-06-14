@@ -49,7 +49,7 @@ class PageSeeder extends Seeder
                 'en' => 'EN: Meta description',
                 'es' => 'ES: Meta description',
             ],
-        ])
+        ]);
 
         $loremIpsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet non magna eu mattis. Morbi a vehicula est, vel ultricies diam.';
 

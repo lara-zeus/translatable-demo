@@ -14,12 +14,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('seo', function (Blueprint $table) {
-            $table->json('description')->change();
-            $table->json('title')->change();
-            $table->json('image')->change();
-            $table->json('author')->change();
-            $table->json('robots')->change();
-            $table->json('canonical_url')->change();
+            $table->json('description')->default('[]')->change();
+            $table->json('title')->default('[]')->change();
+            $table->json('image')->default('[]')->change();
+            $table->json('author')->default('[]')->change();
+            $table->json('robots')->default('[]')->change();
+            $table->json('canonical_url')->default('[]')->change();
         });
     }
 

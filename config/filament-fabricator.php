@@ -4,7 +4,7 @@
 
 return [
     'routing' => [
-        'enabled' => true,
+        'enabled' => false, // cf. controller
         'prefix' => null, //    /pages
     ],
 

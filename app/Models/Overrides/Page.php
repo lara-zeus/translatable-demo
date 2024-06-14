@@ -68,7 +68,7 @@ class Page extends \Z3d0X\FilamentFabricator\Models\Page
     public function getDefaultUrlArgs(): array
     {
         return [
-            'locale' => 'fr',
+            'locale' => 'en',
         ];
     }
 
@@ -128,7 +128,7 @@ class Page extends \Z3d0X\FilamentFabricator\Models\Page
             fn (string $locale) => [
                 'locale' => $locale,
             ],
-            $translatable->getDefaultLocales() ?: ['fr', 'en']
+            $translatable->getDefaultLocales() ?: ['fr', 'en', 'es']
         );
     }
 

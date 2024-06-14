@@ -24,7 +24,7 @@ class ListPages extends \Z3d0X\FilamentFabricator\Resources\PageResource\Pages\L
         $actions = $table->getActions();
 
         $table->actions(array_merge([
-            Action::make('Voir')
+            Action::make(__('filament-fabricator::page-resource.actions.visit'))
                 ->url(
                     fn (Page $page) => $page->getUrl([
                         'locale' => $page->getLocale(),
