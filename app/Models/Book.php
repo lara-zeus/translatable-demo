@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Spatie\Translatable\HasTranslations;
 
 /**
+ * 
+ *
  * @property int $id
  * @property array $title
  * @property array|null $cover
@@ -16,7 +18,6 @@ use Spatie\Translatable\HasTranslations;
  * @property array|null $authors
  * @property-read \App\Models\Meta|null $meta
  * @property-read mixed $translations
- *
  * @method static \Database\Factories\BookFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Book newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Book newQuery()
@@ -31,7 +32,6 @@ use Spatie\Translatable\HasTranslations;
  * @method static \Illuminate\Database\Eloquent\Builder|Book whereLocales(string $column, array $locales)
  * @method static \Illuminate\Database\Eloquent\Builder|Book whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Book whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class Book extends Model

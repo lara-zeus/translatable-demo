@@ -7,13 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
 
 /**
+ * 
+ *
  * @property int $id
  * @property int $book_id
  * @property array $title
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read mixed $translations
- *
  * @method static \Database\Factories\MetaFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Meta newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Meta newQuery()
@@ -27,7 +28,6 @@ use Spatie\Translatable\HasTranslations;
  * @method static \Illuminate\Database\Eloquent\Builder|Meta whereLocales(string $column, array $locales)
  * @method static \Illuminate\Database\Eloquent\Builder|Meta whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Meta whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class Meta extends Model

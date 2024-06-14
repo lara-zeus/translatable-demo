@@ -39,7 +39,7 @@ class AdminPanelProvider extends PanelProvider
             ->plugins([
                 FilamentSvgAvatarPlugin::make(),
                 SpatieLaravelTranslatablePlugin::make()
-                    ->defaultLocales(['en', 'es']),
+                    ->defaultLocales(['en', 'es', 'fr']),
                 FilamentFabricatorPlugin::make(),
             ])
             ->defaultAvatarProvider(RawSvgAvatarProvider::class)

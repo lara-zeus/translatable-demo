@@ -7,6 +7,8 @@ namespace App\Models\Overrides;
 use Spatie\Translatable\HasTranslations;
 
 /**
+ * 
+ *
  * @property int $id
  * @property string $model_type
  * @property int $model_id
@@ -20,7 +22,6 @@ use Spatie\Translatable\HasTranslations;
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent $model
  * @property-read mixed $translations
- *
  * @method static \Illuminate\Database\Eloquent\Builder|SEO newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|SEO newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|SEO query()
@@ -39,7 +40,6 @@ use Spatie\Translatable\HasTranslations;
  * @method static \Illuminate\Database\Eloquent\Builder|SEO whereRobots($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SEO whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|SEO whereUpdatedAt($value)
- *
  * @mixin \Eloquent
  */
 class SEO extends \RalphJSmit\Laravel\SEO\Models\SEO
