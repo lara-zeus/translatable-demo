@@ -3,7 +3,6 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\BookResource\Pages;
-use App\Filament\Resources\BookResource\RelationManagers;
 use App\Models\Book;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
@@ -33,8 +32,6 @@ class BookResource extends Resource
                         TextInput::make('title'),
                     ]),
 
-
-
                 TextInput::make('title')
                     ->required()
                     ->columnSpanFull(),
@@ -43,10 +40,8 @@ class BookResource extends Resource
                     ->image(),
                 Repeater::make('authors')
                     ->schema([
-                        TextInput::make('name')
+                        TextInput::make('name'),
                     ]),
-
-
 
             ]);
     }

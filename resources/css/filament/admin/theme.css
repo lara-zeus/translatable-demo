@@ -1,0 +1,14 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+
+@import 'cropperjs/dist/cropper.css';
+@import '/vendor/awcodes/filament-curator/resources/css/plugin.css';
+
+@config 'tailwind.config.js';
+
+.fi-section {
+    overflow: visible;
+}
+
+.fi-fo-builder-item {
+    overflow: visible!important;
+}
