@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\BookResource\Pages;
 use App\Models\Book;
 use Filament\Forms;
+use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
@@ -13,6 +14,7 @@ use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
+use Livewire\Component as Livewire;
 
 class BookResource extends Resource
 {
@@ -26,6 +28,13 @@ class BookResource extends Resource
     {
         return $form
             ->schema([
+                // for demo, use CheckboxList with local switcher
+                CheckboxList::make('marineVehiclePackage')
+                    ->dehydrated(false)
+                    ->columnSpanFull()
+                    ->columns(4)
+                    ->options(fn(Livewire $livewire) => Book::whereLocale('title', $livewire->activeLocale)->pluck('title', 'id')),
+
                 Forms\Components\Section::make('meta')
                     ->relationship('meta')
                     ->schema([
@@ -39,6 +48,8 @@ class BookResource extends Resource
 //                    ->required()
                     ->image(),
                 Repeater::make('authors')
+                    ->collapsed(false)
+                    ->collapsible(false)
                     ->schema([
                         TextInput::make('name'),
                     ]),

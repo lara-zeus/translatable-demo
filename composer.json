@@ -11,7 +11,7 @@
         "php": "^8.2",
         "awcodes/filament-curator": "^3.6",
         "filament/filament": "^3.2",
-        "filament/spatie-laravel-translatable-plugin": "3.x-dev",
+        "filament/spatie-laravel-translatable-plugin": "*",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
         "ralphjsmit/laravel-filament-seo": "^1.3",
@@ -96,11 +96,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "github",
-            "url": "https://github.com/lara-zeus/translatable"
-        }
-    ]
+    "prefer-stable": true
 }
