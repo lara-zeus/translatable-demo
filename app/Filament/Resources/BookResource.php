@@ -54,6 +54,17 @@ class BookResource extends Resource
                         TextInput::make('name'),
                     ]),
 
+                Forms\Components\Section::make('JSON fields')
+                    ->schema([
+                        TextInput::make('json_fields.summary')
+                            ->columnSpan(12),
+                        Forms\Components\DatePicker::make('json_fields.summary_date')
+                            ->columnSpan(3),
+                    ])
+                    ->columns(12),               
+                
+                
+
             ]);
     }
 
