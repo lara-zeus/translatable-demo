@@ -39,13 +39,14 @@ class Book extends Model
     use HasFactory;
     use HasTranslations;
 
-    public $translatable = ['title', 'cover', 'authors'];
+    public $translatable = ['title', 'cover', 'authors', 'json_fields->summary'];
 
     protected $guarded = [];
 
-    /*protected $casts = [
-        'authors' => 'array'
-    ];*/
+    protected $casts = [
+        // 'authors' => 'array'
+        'json_fields' => 'json'
+    ];
 
     public function meta(): HasOne
     {
