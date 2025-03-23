@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace App\Overrides;
 
 use App\Filament\Fabricator\Layouts\DefaultLayout;
-use App\Services\PageRoutesService;
 use Illuminate\Support\Str;
+use Z3d0X\FilamentFabricator\Services\PageRoutesService;
 
 class FilamentFabricatorManager extends \Z3d0X\FilamentFabricator\FilamentFabricatorManager
 {
-    public function __construct(protected PageRoutesService $routesService)
+    public function __construct(?PageRoutesService $routesService = null)
     {
         parent::__construct();
     }

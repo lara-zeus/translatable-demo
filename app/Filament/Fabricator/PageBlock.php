@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace App\Filament\Fabricator;
 
-use App\Filament\Fabricator\Layouts\ContentPageLayout;
-use App\Filament\Fabricator\Layouts\UiDemoLayout;
-use App\Models\Overrides\Page;
 use Filament\Forms\Components\Builder\Block;
+use Z3d0X\FilamentFabricator\Models\Contracts\Page;
 
 abstract class PageBlock extends \Z3d0X\FilamentFabricator\PageBlocks\PageBlock
 {
