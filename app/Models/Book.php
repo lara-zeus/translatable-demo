@@ -39,7 +39,9 @@ class Book extends Model
     use HasFactory;
     use HasTranslations;
 
-    public $translatable = ['title', 'cover', 'authors', 'json_fields->summary'];
+    public $translatable = [
+        'title', 'cover', 'authors'
+    ];
 
     protected $guarded = [];
 
