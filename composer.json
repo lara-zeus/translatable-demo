@@ -12,7 +12,7 @@
         "awcodes/filament-curator": "^3.6",
         "filament/filament": "^3.2",
         "spatie/laravel-translatable": "^6.0",
-        "filament/spatie-laravel-translatable-plugin": "3.3.0",
+        "filament/spatie-laravel-translatable-plugin": "^3.3",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
         "ralphjsmit/laravel-filament-seo": "^1.3",
