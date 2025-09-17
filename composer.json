@@ -10,29 +10,22 @@
     "require": {
         "php": "^8.2",
         "awcodes/filament-curator": "^3.6",
-        "filament/filament": "^3.2",
-        "spatie/laravel-translatable": "^6.0",
-        "filament/spatie-laravel-translatable-plugin": "^3.3",
+        "filament/filament": "^4.0",
+        "lara-zeus/spatie-translatable": "^1.0",
         "laravel/framework": "^11.0",
         "laravel/tinker": "^2.9",
-        "ralphjsmit/laravel-filament-seo": "^1.3",
+        "ralphjsmit/laravel-filament-seo": "^2.0",
         "spatie/laravel-route-attributes": "^1.22",
-        "voltra/filament-svg-avatar": "^1.2",
-        "z3d0x/filament-fabricator": "^2.2"
+        "spatie/laravel-translatable": "^6.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.0",
-        "driftingly/rector-laravel": "^1.2",
         "fakerphp/faker": "^1.23",
-        "larastan/larastan": "^2.9",
         "laravel/pint": "^1.13",
         "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.0",
-        "phpstan/extension-installer": "^1.4",
-        "phpstan/phpstan-deprecation-rules": "^1.2",
-        "phpstan/phpstan-phpunit": "^1.4",
-        "rector/rector": "^1.1",
+        "roave/security-advisories": "dev-latest",
         "spatie/laravel-ignition": "^2.4"
     },
     "autoload": {
@@ -56,7 +49,6 @@
             "@php artisan ide-helper:meta",
             "@php artisan ide-helper:models -W"
         ],
-        "app:analyse": "@php ./vendor/bin/phpstan analyse",
         "app:format": "@php ./vendor/bin/pint",
         "app:refactor": [
             "@php ./vendor/bin/rector process",
@@ -92,16 +84,9 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
-            "php-http/discovery": true,
-            "phpstan/extension-installer": true
+            "php-http/discovery": true
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "github",
-            "url": "https://github.com/lara-zeus/translatable"
-        }
-    ]
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }

@@ -2,21 +2,24 @@
 
 namespace App\Filament\Resources\BookResource\Pages;
 
+use LaraZeus\SpatieTranslatable\Resources\Pages\ListRecords\Concerns\Translatable;
+use Filament\Actions\CreateAction;
+use LaraZeus\SpatieTranslatable\Actions\LocaleSwitcher;
 use App\Filament\Resources\BookResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
 class ListBooks extends ListRecords
 {
-    use ListRecords\Concerns\Translatable;
+    use Translatable;
 
     protected static string $resource = BookResource::class;
 
     protected function getHeaderActions(): array
     {
         return [
-            Actions\CreateAction::make(),
-            Actions\LocaleSwitcher::make(),
+            CreateAction::make(),
+            LocaleSwitcher::make(),
         ];
     }
 }

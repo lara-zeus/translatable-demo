@@ -2,21 +2,24 @@
 
 namespace App\Filament\Resources\BookResource\Pages;
 
+use LaraZeus\SpatieTranslatable\Resources\Pages\EditRecord\Concerns\Translatable;
+use Filament\Actions\DeleteAction;
+use LaraZeus\SpatieTranslatable\Actions\LocaleSwitcher;
 use App\Filament\Resources\BookResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
 class EditBook extends EditRecord
 {
-    use EditRecord\Concerns\Translatable;
+    use Translatable;
 
     protected static string $resource = BookResource::class;
 
     protected function getHeaderActions(): array
     {
         return [
-            Actions\DeleteAction::make(),
-            Actions\LocaleSwitcher::make(),
+            DeleteAction::make(),
+            LocaleSwitcher::make(),
         ];
     }
 }

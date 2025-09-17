@@ -1,6 +1,6 @@
 <?php
 
-use Filament\Forms\Get;
+use Filament\Schemas\Components\Utilities\Get;
 use Illuminate\View\ComponentAttributeBag;
 
 if (!function_exists('root_path')) {
@@ -19,7 +19,7 @@ if (!function_exists('ifLayoutIs')) {
      * display a block on a given layout(s)
      *
      * @param  string|array  $layoutName  - The name(s) of the layout(s) this component is shown for
-     * @return Closure(Get): bool
+     * @return Closure(\Filament\Schemas\Components\Utilities\Get):bool
      */
     function ifLayoutIs(string|array $layoutName): Closure
     {
@@ -35,7 +35,7 @@ if (!function_exists('ifLayoutIsNot')) {
      * display a block on all but the given layout(s)
      *
      * @param  string|array  $layoutName  - The name(s) of the layout(s) this component is not shown for
-     * @return Closure(Get): bool
+     * @return Closure(\Filament\Schemas\Components\Utilities\Get):bool
      */
     function ifLayoutIsNot(string|array $layoutName): Closure
     {

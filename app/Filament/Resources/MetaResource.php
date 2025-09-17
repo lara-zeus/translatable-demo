@@ -2,9 +2,15 @@
 
 namespace App\Filament\Resources;
 
+use Filament\Schemas\Schema;
+use Filament\Actions\EditAction;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use App\Filament\Resources\MetaResource\Pages\ListMetas;
+use App\Filament\Resources\MetaResource\Pages\CreateMeta;
+use App\Filament\Resources\MetaResource\Pages\EditMeta;
 use App\Filament\Resources\MetaResource\Pages;
 use App\Models\Meta;
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -13,12 +19,12 @@ class MetaResource extends Resource
 {
     protected static ?string $model = Meta::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
-            ->schema([
+        return $schema
+            ->components([
                 //
             ]);
     }
@@ -32,12 +38,12 @@ class MetaResource extends Resource
             ->filters([
                 //
             ])
-            ->actions([
-                Tables\Actions\EditAction::make(),
+            ->recordActions([
+                EditAction::make(),
             ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -52,9 +58,9 @@ class MetaResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListMetas::route('/'),
-            'create' => Pages\CreateMeta::route('/create'),
-            'edit' => Pages\EditMeta::route('/{record}/edit'),
+            'index' => ListMetas::route('/'),
+            'create' => CreateMeta::route('/create'),
+            'edit' => EditMeta::route('/{record}/edit'),
         ];
     }
 }

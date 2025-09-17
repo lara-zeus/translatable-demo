@@ -2,24 +2,27 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Carbon;
+use Database\Factories\ChapterFactory;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $title
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @method static \Database\Factories\ChapterFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|Chapter newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Chapter newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Chapter query()
- * @method static \Illuminate\Database\Eloquent\Builder|Chapter whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Chapter whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Chapter whereTitle($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Chapter whereUpdatedAt($value)
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @method static ChapterFactory factory($count = null, $state = [])
+ * @method static Builder|Chapter newModelQuery()
+ * @method static Builder|Chapter newQuery()
+ * @method static Builder|Chapter query()
+ * @method static Builder|Chapter whereCreatedAt($value)
+ * @method static Builder|Chapter whereId($value)
+ * @method static Builder|Chapter whereTitle($value)
+ * @method static Builder|Chapter whereUpdatedAt($value)
  * @mixin \Eloquent
  */
 class Chapter extends Model
