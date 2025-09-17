@@ -51,7 +51,6 @@
         ],
         "app:format": "@php ./vendor/bin/pint",
         "app:refactor": [
-            "@php ./vendor/bin/rector process",
             "@composer format"
         ],
         "post-autoload-dump": [
@@ -87,6 +86,12 @@
             "php-http/discovery": true
         }
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../p/spatie-translatable"
+        }
+    ]
 }
