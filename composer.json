@@ -9,22 +9,23 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "awcodes/filament-curator": "^3.6",
         "filament/filament": "^4.0",
         "lara-zeus/spatie-translatable": "^1.0",
-        "laravel/framework": "^11.0",
-        "laravel/tinker": "^2.9",
+        "laravel/framework": "^12.0",
+        "laravel/tinker": "^2.10.1",
         "ralphjsmit/laravel-filament-seo": "^2.0",
         "spatie/laravel-route-attributes": "^1.22",
         "spatie/laravel-translatable": "^6.0"
     },
     "require-dev": {
-        "barryvdh/laravel-ide-helper": "^3.0",
         "fakerphp/faker": "^1.23",
-        "laravel/pint": "^1.13",
-        "laravel/sail": "^1.26",
+        "laravel/pail": "^1.2.2",
+        "laravel/pint": "^1.24",
+        "laravel/sail": "^1.41",
         "mockery/mockery": "^1.6",
-        "nunomaduro/collision": "^8.0",
+        "nunomaduro/collision": "^8.6",
+        "filament/upgrade": "^4.0",
+        "barryvdh/laravel-ide-helper": "^3.0",
         "roave/security-advisories": "dev-latest",
         "spatie/laravel-ignition": "^2.4"
     },
@@ -82,7 +83,6 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
-            "pestphp/pest-plugin": true,
             "php-http/discovery": true
         }
     },

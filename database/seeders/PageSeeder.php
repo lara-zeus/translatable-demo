@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Filament\Fabricator\Layouts\DefaultLayout;
 use App\Filament\Fabricator\PageBlocks\TextBlock;
 use App\Models\Overrides\Page;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class PageSeeder extends Seeder

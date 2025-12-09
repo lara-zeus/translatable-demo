@@ -14,7 +14,7 @@ class LocaleDetector
     /**
      * Handle an incoming request.
      *
-     * @param Closure(Request):Response $next
+     * @param  Closure(Request):Response  $next
      */
     public function handle(Request $request, Closure $next): Response
     {
@@ -22,7 +22,7 @@ class LocaleDetector
 
         if ($this->matchesLocale($path, 'fr')) {
             App::setLocale('fr');
-        } else if ($this->matchesLocale($path, 'es')) {
+        } elseif ($this->matchesLocale($path, 'es')) {
             App::setLocale('es');
         } else {
             App::setLocale(App::getFallbackLocale());

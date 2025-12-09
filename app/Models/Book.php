@@ -2,17 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Support\Carbon;
 use Database\Factories\BookFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Support\Carbon;
 use Spatie\Translatable\HasTranslations;
 
 /**
- *
- *
  * @property int $id
  * @property array $title
  * @property array|null $cover
@@ -21,6 +19,7 @@ use Spatie\Translatable\HasTranslations;
  * @property array|null $authors
  * @property-read Meta|null $meta
  * @property-read mixed $translations
+ *
  * @method static BookFactory factory($count = null, $state = [])
  * @method static Builder|Book newModelQuery()
  * @method static Builder|Book newQuery()
@@ -35,6 +34,7 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder|Book whereLocales(string $column, array $locales)
  * @method static Builder|Book whereTitle($value)
  * @method static Builder|Book whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class Book extends Model
@@ -43,14 +43,14 @@ class Book extends Model
     use HasTranslations;
 
     public $translatable = [
-        'title', 'cover', 'authors'
+        'title', 'cover', 'authors',
     ];
 
     protected $guarded = [];
 
     protected $casts = [
         // 'authors' => 'array'
-        'json_fields' => 'json'
+        'json_fields' => 'json',
     ];
 
     public function meta(): HasOne

@@ -2,30 +2,33 @@
 
 namespace App\Filament\Resources;
 
-use Filament\Schemas\Schema;
-use Filament\Actions\EditAction;
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteBulkAction;
-use App\Filament\Resources\MetaResource\Pages\ListMetas;
 use App\Filament\Resources\MetaResource\Pages\CreateMeta;
 use App\Filament\Resources\MetaResource\Pages\EditMeta;
-use App\Filament\Resources\MetaResource\Pages;
+use App\Filament\Resources\MetaResource\Pages\ListMetas;
 use App\Models\Meta;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Schemas\Schema;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
 class MetaResource extends Resource
 {
     protected static ?string $model = Meta::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Schema $schema): Schema
     {
         return $schema
             ->components([
-                //
+                Select::make('book_id')
+                    ->relationship('book', 'title'),
+                TextInput::make('title'),
             ]);
     }
 
@@ -33,10 +36,7 @@ class MetaResource extends Resource
     {
         return $table
             ->columns([
-                //
-            ])
-            ->filters([
-                //
+                TextColumn::make('title'),
             ])
             ->recordActions([
                 EditAction::make(),
@@ -46,13 +46,6 @@ class MetaResource extends Resource
                     DeleteBulkAction::make(),
                 ]),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
     }
 
     public static function getPages(): array

@@ -2,28 +2,23 @@
 
 namespace App\Filament\Resources;
 
-use LaraZeus\SpatieTranslatable\Resources\Concerns\Translatable;
-use Filament\Schemas\Schema;
-use Filament\Schemas\Components\Section;
-use Filament\Forms\Components\DatePicker;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Actions\EditAction;
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteBulkAction;
-use App\Filament\Resources\BookResource\Pages\ListBooks;
 use App\Filament\Resources\BookResource\Pages\CreateBook;
 use App\Filament\Resources\BookResource\Pages\EditBook;
-use App\Filament\Resources\BookResource\Pages;
+use App\Filament\Resources\BookResource\Pages\ListBooks;
 use App\Models\Book;
-use Filament\Forms;
-use Filament\Forms\Components\CheckboxList;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Schemas\Components\Section;
+use Filament\Schemas\Schema;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Livewire\Component as Livewire;
+use LaraZeus\SpatieTranslatable\Resources\Concerns\Translatable;
 
 class BookResource extends Resource
 {
@@ -31,19 +26,12 @@ class BookResource extends Resource
 
     protected static ?string $model = Book::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Schema $schema): Schema
     {
         return $schema
             ->components([
-                // for demo, use CheckboxList with local switcher
-                CheckboxList::make('marineVehiclePackage')
-                    ->dehydrated(false)
-                    ->columnSpanFull()
-                    ->columns(4)
-                    ->options(fn(Livewire $livewire) => Book::whereLocale('title', $livewire->activeLocale)->pluck('title', 'id')),
-
                 Section::make('meta')
                     ->relationship('meta')
                     ->schema([
@@ -53,9 +41,10 @@ class BookResource extends Resource
                 TextInput::make('title')
                     ->required()
                     ->columnSpanFull(),
+
                 FileUpload::make('cover')
-//                    ->required()
                     ->image(),
+
                 Repeater::make('authors')
                     ->collapsed(false)
                     ->collapsible(false)
@@ -70,10 +59,7 @@ class BookResource extends Resource
                         DatePicker::make('json_fields.summary_date')
                             ->columnSpan(3),
                     ])
-                    ->columns(12),               
-                
-                
-
+                    ->columns(12),
             ]);
     }
 
@@ -84,9 +70,6 @@ class BookResource extends Resource
             ->columns([
                 TextColumn::make('title'),
             ])
-            ->filters([
-                //
-            ])
             ->recordActions([
                 EditAction::make(),
             ])
@@ -95,13 +78,6 @@ class BookResource extends Resource
                     DeleteBulkAction::make(),
                 ]),
             ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
     }
 
     public static function getPages(): array

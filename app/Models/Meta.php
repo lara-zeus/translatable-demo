@@ -2,22 +2,22 @@
 
 namespace App\Models;
 
-use Illuminate\Support\Carbon;
 use Database\Factories\MetaFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Carbon;
 use Spatie\Translatable\HasTranslations;
 
 /**
- *
- *
  * @property int $id
  * @property int $book_id
  * @property array $title
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property-read mixed $translations
+ *
  * @method static MetaFactory factory($count = null, $state = [])
  * @method static Builder|Meta newModelQuery()
  * @method static Builder|Meta newQuery()
@@ -31,6 +31,7 @@ use Spatie\Translatable\HasTranslations;
  * @method static Builder|Meta whereLocales(string $column, array $locales)
  * @method static Builder|Meta whereTitle($value)
  * @method static Builder|Meta whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class Meta extends Model
@@ -41,4 +42,9 @@ class Meta extends Model
     protected $guarded = [];
 
     public $translatable = ['title'];
+
+    public function book(): BelongsTo
+    {
+        return $this->belongsTo(Book::class);
+    }
 }
