@@ -13,8 +13,11 @@ use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
+use Filament\Schemas\Components\Group;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
@@ -40,7 +43,8 @@ class BookResource extends Resource
                     ->columnSpanFull(),
 
                 FileUpload::make('cover')
-                    ->required()
+                    // enable it if you're testing the upload component
+                    //->required()
                     ->helperText('this field is translatable')
                     ->disk('public')
                     ->image(),
@@ -70,14 +74,19 @@ class BookResource extends Resource
                         TextInput::make('name'),
                     ]),
 
-                /*Section::make('JSON fields')
+                Section::make('json_fields')
+                    ->statePath('json_fields')
                     ->schema([
-                        TextInput::make('json_fields.summary')
-                            ->columnSpan(12),
-                        DatePicker::make('json_fields.summary_date')
-                            ->columnSpan(3),
-                    ])
-                    ->columns(12),*/
+                        TextInput::make('summary_title'),
+                        TextInput::make('summary'),
+                    ]),
+
+
+                /*Group::make()->statePath('json_fields')->schema([
+                    TextInput::make('metaTitle'),
+                    TagsInput::make('keywords'),
+                    Toggle::make('noIndex'),
+                ])*/
 
             ]);
     }

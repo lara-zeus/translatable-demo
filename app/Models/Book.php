@@ -43,7 +43,7 @@ class Book extends Model
     use HasTranslations;
 
     public $translatable = [
-        'title', 'cover', 'authors',
+        'title', 'cover', 'authors', 'json_fields'
     ];
 
     protected $guarded = [];
