@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Routing\Middleware\SubstituteBindings;
+
 return [
     /*
      *  Automatic registration of routes will only happen if this setting is `true`
@@ -14,10 +16,6 @@ return [
      */
     'directories' => [
         app_path('Http/Controllers'),
-
-        app_path('Http/Controllers/Web') => [
-            'middleware' => ['web'],
-        ],
 
         /*
         app_path('Http/Controllers/Api') => [
@@ -35,6 +33,6 @@ return [
      * This middleware will be applied to all routes.
      */
     'middleware' => [
-        \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        SubstituteBindings::class,
     ],
 ];

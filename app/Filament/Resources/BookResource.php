@@ -2,18 +2,24 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\BookResource\Pages;
+use App\Filament\Resources\BookResource\Pages\CreateBook;
+use App\Filament\Resources\BookResource\Pages\EditBook;
+use App\Filament\Resources\BookResource\Pages\ListBooks;
 use App\Models\Book;
-use Filament\Forms;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
 use Filament\Forms\Components\CheckboxList;
+use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Form;
-use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Schemas\Components\Section;
+use Filament\Schemas\Schema;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use LaraZeus\SpatieTranslatable\Resources\Concerns\Translatable;
 use Livewire\Component as Livewire;
 
 class BookResource extends Resource
@@ -22,20 +28,20 @@ class BookResource extends Resource
 
     protected static ?string $model = Book::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|\BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
-            ->schema([
+        return $schema
+            ->components([
                 // for demo, use CheckboxList with local switcher
                 CheckboxList::make('marineVehiclePackage')
                     ->dehydrated(false)
                     ->columnSpanFull()
                     ->columns(4)
-                    ->options(fn(Livewire $livewire) => Book::whereLocale('title', $livewire->activeLocale)->pluck('title', 'id')),
+                    ->options(fn (Livewire $livewire) => Book::whereLocale('title', $livewire->activeLocale)->pluck('title', 'id')),
 
-                Forms\Components\Section::make('meta')
+                Section::make('meta')
                     ->relationship('meta')
                     ->schema([
                         TextInput::make('title'),
@@ -54,16 +60,14 @@ class BookResource extends Resource
                         TextInput::make('name'),
                     ]),
 
-                Forms\Components\Section::make('JSON fields')
+                Section::make('JSON fields')
                     ->schema([
                         TextInput::make('json_fields.summary')
                             ->columnSpan(12),
-                        Forms\Components\DatePicker::make('json_fields.summary_date')
+                        DatePicker::make('json_fields.summary_date')
                             ->columnSpan(3),
                     ])
-                    ->columns(12),               
-                
-                
+                    ->columns(12),
 
             ]);
     }
@@ -73,17 +77,17 @@ class BookResource extends Resource
         return $table
             ->defaultSort('id', 'desc')
             ->columns([
-                Tables\Columns\TextColumn::make('title'),
+                TextColumn::make('title'),
             ])
             ->filters([
                 //
             ])
-            ->actions([
-                Tables\Actions\EditAction::make(),
+            ->recordActions([
+                EditAction::make(),
             ])
-            ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -98,9 +102,9 @@ class BookResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListBooks::route('/'),
-            'create' => Pages\CreateBook::route('/create'),
-            'edit' => Pages\EditBook::route('/{record}/edit'),
+            'index' => ListBooks::route('/'),
+            'create' => CreateBook::route('/create'),
+            'edit' => EditBook::route('/{record}/edit'),
         ];
     }
 }
