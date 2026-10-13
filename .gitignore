@@ -26,3 +26,4 @@ _ide_helper.php
 vite.config.js.timestamp-*
 .phpunit.cache
 /build
+/.cursor
