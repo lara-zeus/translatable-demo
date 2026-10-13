@@ -52,6 +52,7 @@ class BookResource extends Resource
                     ->columnSpanFull(),
                 FileUpload::make('cover')
 //                    ->required()
+                        ->disk('public')
                     ->image(),
                 Repeater::make('authors')
                     ->collapsed(false)
