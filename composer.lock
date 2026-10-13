@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "268f49ab5a6da266cc92b2b4d84a56ee",
+    "content-hash": "7b684d392239c29659b62fc1e9e6d39e",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -70,94 +70,6 @@
                 "source": "https://github.com/AnourValar/eloquent-serialize/tree/1.3.12"
             },
             "time": "2026-09-13T06:25:37+00:00"
-        },
-        {
-            "name": "awcodes/filament-curator",
-            "version": "v5.5.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/awcodes/filament-curator.git",
-                "reference": "ed7d1fb9a03825ef81dba5493b76f8524eb415f9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/awcodes/filament-curator/zipball/ed7d1fb9a03825ef81dba5493b76f8524eb415f9",
-                "reference": "ed7d1fb9a03825ef81dba5493b76f8524eb415f9",
-                "shasum": ""
-            },
-            "require": {
-                "enshrined/svg-sanitize": "^0.22|^1.0",
-                "filament/filament": "^4.0|^5.0",
-                "league/glide": "^3.0",
-                "php": "^8.2",
-                "spatie/laravel-package-tools": "^1.15.0"
-            },
-            "require-dev": {
-                "awcodes/focus": "^1.0",
-                "larastan/larastan": "^3.0",
-                "laravel/pint": "^1.0",
-                "nunomaduro/collision": "^8.0",
-                "orchestra/testbench": "^9.0|^10.0|^11.0",
-                "pestphp/pest": "^4.0",
-                "pestphp/pest-plugin-arch": "^4.0",
-                "pestphp/pest-plugin-laravel": "^4.0",
-                "pestphp/pest-plugin-livewire": "^4.0",
-                "rector/rector": "^2.0",
-                "spatie/laravel-ray": "^1.26"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "aliases": {
-                        "Glide": "Awcodes\\Curator\\Facades\\Glide",
-                        "Curator": "Awcodes\\Curator\\Facades\\Curator",
-                        "Curation": "Awcodes\\Curator\\Facades\\Curation"
-                    },
-                    "providers": [
-                        "Awcodes\\Curator\\CuratorServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "Awcodes\\Curator\\": "src",
-                    "Awcodes\\Curator\\Database\\Factories\\": "database/factories"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "awcodes",
-                    "email": "awcodes1@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A media picker and manager for Filament, with Glide-backed image transformations and per-image curations.",
-            "homepage": "https://github.com/awcodes/filament-curator",
-            "keywords": [
-                "awcodes",
-                "curator",
-                "filament",
-                "laravel",
-                "plugin"
-            ],
-            "support": {
-                "issues": "https://github.com/awcodes/filament-curator/issues",
-                "source": "https://github.com/awcodes/filament-curator"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/awcodes",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-10-12T15:30:33+00:00"
         },
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -1227,51 +1139,6 @@
             "time": "2025-03-06T22:45:56+00:00"
         },
         {
-            "name": "enshrined/svg-sanitize",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/darylldoyle/svg-sanitizer.git",
-                "reference": "f3300fcd1bbf67d205b52217c75d0f7d6a8c47ff"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/darylldoyle/svg-sanitizer/zipball/f3300fcd1bbf67d205b52217c75d0f7d6a8c47ff",
-                "reference": "f3300fcd1bbf67d205b52217c75d0f7d6a8c47ff",
-                "shasum": ""
-            },
-            "require": {
-                "ext-dom": "*",
-                "ext-libxml": "*",
-                "php": "^7.1 || ^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.5 || ^8.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "enshrined\\svgSanitize\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Daryll Doyle",
-                    "email": "daryll@enshrined.co.uk"
-                }
-            ],
-            "description": "An SVG sanitizer for PHP",
-            "support": {
-                "issues": "https://github.com/darylldoyle/svg-sanitizer/issues",
-                "source": "https://github.com/darylldoyle/svg-sanitizer/tree/1.0.0"
-            },
-            "time": "2026-09-01T09:35:47+00:00"
-        },
-        {
             "name": "filament/actions",
             "version": "v5.10.1",
             "source": {
@@ -2312,150 +2179,6 @@
             "time": "2026-08-24T17:13:02+00:00"
         },
         {
-            "name": "intervention/gif",
-            "version": "4.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Intervention/gif.git",
-                "reference": "c3598a16ebe7690cd55640c44144a9df383ea73c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/gif/zipball/c3598a16ebe7690cd55640c44144a9df383ea73c",
-                "reference": "c3598a16ebe7690cd55640c44144a9df383ea73c",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.1"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^2.1",
-                "phpunit/phpunit": "^10.0 || ^11.0  || ^12.0",
-                "slevomat/coding-standard": "~8.0",
-                "squizlabs/php_codesniffer": "^3.8"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Intervention\\Gif\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oliver Vogel",
-                    "email": "oliver@intervention.io",
-                    "homepage": "https://intervention.io/"
-                }
-            ],
-            "description": "Native PHP GIF Encoder/Decoder",
-            "homepage": "https://github.com/intervention/gif",
-            "keywords": [
-                "animation",
-                "gd",
-                "gif",
-                "image"
-            ],
-            "support": {
-                "issues": "https://github.com/Intervention/gif/issues",
-                "source": "https://github.com/Intervention/gif/tree/4.2.4"
-            },
-            "funding": [
-                {
-                    "url": "https://paypal.me/interventionio",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/Intervention",
-                    "type": "github"
-                },
-                {
-                    "url": "https://ko-fi.com/interventionphp",
-                    "type": "ko_fi"
-                }
-            ],
-            "time": "2026-01-04T09:27:23+00:00"
-        },
-        {
-            "name": "intervention/image",
-            "version": "3.11.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Intervention/image.git",
-                "reference": "af6e5cfa403233cec4c4347e475addcbdc5b8f07"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/af6e5cfa403233cec4c4347e475addcbdc5b8f07",
-                "reference": "af6e5cfa403233cec4c4347e475addcbdc5b8f07",
-                "shasum": ""
-            },
-            "require": {
-                "ext-mbstring": "*",
-                "intervention/gif": "^4.2",
-                "php": "^8.1"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.6",
-                "phpstan/phpstan": "^2.1",
-                "phpunit/phpunit": "^10.0 || ^11.0 || ^12.0",
-                "slevomat/coding-standard": "~8.0",
-                "squizlabs/php_codesniffer": "^4"
-            },
-            "suggest": {
-                "ext-exif": "Recommended to be able to read EXIF data properly."
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Intervention\\Image\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Oliver Vogel",
-                    "email": "oliver@intervention.io",
-                    "homepage": "https://intervention.io"
-                }
-            ],
-            "description": "PHP Image Processing",
-            "homepage": "https://image.intervention.io",
-            "keywords": [
-                "gd",
-                "image",
-                "imagick",
-                "resize",
-                "thumbnail",
-                "watermark"
-            ],
-            "support": {
-                "issues": "https://github.com/Intervention/image/issues",
-                "source": "https://github.com/Intervention/image/tree/3.11.10"
-            },
-            "funding": [
-                {
-                    "url": "https://paypal.me/interventionio",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/Intervention",
-                    "type": "github"
-                },
-                {
-                    "url": "https://ko-fi.com/interventionphp",
-                    "type": "ko_fi"
-                }
-            ],
-            "time": "2026-10-05T12:21:16+00:00"
-        },
-        {
             "name": "kirschbaum-development/eloquent-power-joins",
             "version": "4.3.4",
             "source": {
@@ -2520,17 +2243,11 @@
         },
         {
             "name": "lara-zeus/spatie-translatable",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lara-zeus/spatie-translatable.git",
-                "reference": "4583205ade3270a9b4c3293cab102f8b2d772523"
-            },
+            "version": "2.x-dev",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lara-zeus/spatie-translatable/zipball/4583205ade3270a9b4c3293cab102f8b2d772523",
-                "reference": "4583205ade3270a9b4c3293cab102f8b2d772523",
-                "shasum": ""
+                "type": "path",
+                "url": "../p/spatie-translatable",
+                "reference": "f9094910bf921bd6261865c6ae3dd4256b7087c5"
             },
             "require": {
                 "ext-intl": "*",
@@ -2542,6 +2259,9 @@
                 "larastan/larastan": "^3.4",
                 "laravel/pint": "^1.0",
                 "orchestra/testbench": "^10.2",
+                "pestphp/pest": "*",
+                "pestphp/pest-plugin-laravel": "*",
+                "pestphp/pest-plugin-livewire": "*",
                 "phpstan/extension-installer": "^1.4",
                 "roave/security-advisories": "dev-latest"
             },
@@ -2558,7 +2278,11 @@
                     "LaraZeus\\SpatieTranslatable\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -2568,13 +2292,9 @@
                 "issues": "https://github.com/lara-zeus/spatie-translatable/issues",
                 "source": "https://github.com/lara-zeus/spatie-translatable"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/atmonshi",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-04-23T17:31:05+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "laravel/framework",
@@ -3406,72 +3126,6 @@
                 "source": "https://github.com/thephpleague/flysystem-local/tree/3.35.3"
             },
             "time": "2026-08-12T13:29:21+00:00"
-        },
-        {
-            "name": "league/glide",
-            "version": "3.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/glide.git",
-                "reference": "555bb802f951246ce454b86075dccb8b27156185"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/glide/zipball/555bb802f951246ce454b86075dccb8b27156185",
-                "reference": "555bb802f951246ce454b86075dccb8b27156185",
-                "shasum": ""
-            },
-            "require": {
-                "intervention/image": "^3.9.1",
-                "league/flysystem": "^3.0",
-                "php": "^8.1",
-                "psr/http-message": "^1.0|^2.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.48",
-                "mockery/mockery": "^1.6",
-                "phpstan/phpstan": "^2.0",
-                "phpunit/phpunit": "^10.5 || ^11.0 || ^12.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "League\\Glide\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jonathan Reinink",
-                    "email": "jonathan@reinink.ca",
-                    "homepage": "http://reinink.ca"
-                },
-                {
-                    "name": "Titouan Galopin",
-                    "email": "galopintitouan@gmail.com",
-                    "homepage": "https://titouangalopin.com"
-                }
-            ],
-            "description": "Wonderfully easy on-demand image manipulation library with an HTTP based API.",
-            "homepage": "http://glide.thephpleague.com",
-            "keywords": [
-                "ImageMagick",
-                "editing",
-                "gd",
-                "image",
-                "imagick",
-                "league",
-                "manipulation",
-                "processing"
-            ],
-            "support": {
-                "issues": "https://github.com/thephpleague/glide/issues",
-                "source": "https://github.com/thephpleague/glide/tree/3.2.0"
-            },
-            "time": "2026-02-19T11:57:40+00:00"
         },
         {
             "name": "league/mime-type-detection",
@@ -5318,227 +4972,6 @@
             "time": "2026-06-29T15:41:09+00:00"
         },
         {
-            "name": "ralphjsmit/laravel-filament-seo",
-            "version": "2.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ralphjsmit/laravel-filament-seo.git",
-                "reference": "a9841f4db7ed8eb00bc7ab7918f658468e5893b1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ralphjsmit/laravel-filament-seo/zipball/a9841f4db7ed8eb00bc7ab7918f658468e5893b1",
-                "reference": "a9841f4db7ed8eb00bc7ab7918f658468e5893b1",
-                "shasum": ""
-            },
-            "require": {
-                "filament/filament": "^4.0|^5.0",
-                "illuminate/contracts": "^11.0|^12.0|^13.0",
-                "php": "^8.0",
-                "ralphjsmit/laravel-seo": "^1.7",
-                "spatie/laravel-package-tools": "^1.9.2"
-            },
-            "require-dev": {
-                "doctrine/dbal": "^3.8|^4.4",
-                "nesbot/carbon": "^2.66|^3.0",
-                "nunomaduro/collision": "^8.0|^9.0",
-                "orchestra/testbench": "^9.0|^10.0|^11.0",
-                "pestphp/pest": "^4.0",
-                "pestphp/pest-plugin-laravel": "^4.0",
-                "phpunit/phpunit": "^12.0",
-                "spatie/laravel-ray": "^1.39"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "aliases": [],
-                    "providers": [
-                        "RalphJSmit\\Filament\\SEO\\FilamentSEOServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "RalphJSmit\\Filament\\SEO\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ralph J. Smit",
-                    "email": "rjs@ralphjsmit.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A package to combine the power of Laravel SEO and Filament Admin.",
-            "homepage": "https://github.com/ralphjsmit/laravel-filament-seo",
-            "keywords": [
-                "laravel",
-                "laravel-filament-seo",
-                "ralphjsmit"
-            ],
-            "support": {
-                "issues": "https://github.com/ralphjsmit/laravel-filament-seo/issues",
-                "source": "https://github.com/ralphjsmit/laravel-filament-seo/tree/2.2.1"
-            },
-            "time": "2026-09-11T08:04:52+00:00"
-        },
-        {
-            "name": "ralphjsmit/laravel-helpers",
-            "version": "1.11.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ralphjsmit/laravel-helpers.git",
-                "reference": "6f13f6b7ec597d92dbae1d90d37a63c16dc8e338"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ralphjsmit/laravel-helpers/zipball/6f13f6b7ec597d92dbae1d90d37a63c16dc8e338",
-                "reference": "6f13f6b7ec597d92dbae1d90d37a63c16dc8e338",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^7.4|^8.0",
-                "illuminate/contracts": "^11.0|^12.0|^13.0",
-                "php": "^8.0",
-                "spatie/laravel-package-tools": "^1.9.2"
-            },
-            "require-dev": {
-                "livewire/livewire": "^2.9|^3.4|^4.2",
-                "nesbot/carbon": "^2.66|^3.0",
-                "nunomaduro/collision": "^7.0|^8.0",
-                "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
-                "pestphp/pest": "^2.34|^3.7|^4.4",
-                "pestphp/pest-plugin-laravel": "^2.3|^3.1|^4.1",
-                "phpunit/phpunit": "^10.5|^11.5|^12.5.12",
-                "spatie/invade": "^1.0|^2.0",
-                "spatie/laravel-ray": "^1.39"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "aliases": {
-                        "Helpers": "RalphJSmit\\Helpers\\Facades\\Helpers"
-                    },
-                    "providers": [
-                        "RalphJSmit\\Helpers\\HelpersServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/Laravel/Support/helpers.php",
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "RalphJSmit\\Helpers\\": "src",
-                    "RalphJSmit\\Helpers\\Database\\Factories\\": "database/factories"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ralph J. Smit",
-                    "email": "rjs@ralphjsmit.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A package containing handy helpers for your Laravel-application.",
-            "homepage": "https://github.com/ralphjsmit/laravel-helpers",
-            "keywords": [
-                "laravel",
-                "laravel-helpers",
-                "ralphjsmit"
-            ],
-            "support": {
-                "issues": "https://github.com/ralphjsmit/laravel-helpers/issues",
-                "source": "https://github.com/ralphjsmit/laravel-helpers/tree/1.11.1"
-            },
-            "time": "2026-10-07T21:46:40+00:00"
-        },
-        {
-            "name": "ralphjsmit/laravel-seo",
-            "version": "1.8.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ralphjsmit/laravel-seo.git",
-                "reference": "9ecdc4d7f4c9d0f87944ca8f0b1109a1cf96c1fb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ralphjsmit/laravel-seo/zipball/9ecdc4d7f4c9d0f87944ca8f0b1109a1cf96c1fb",
-                "reference": "9ecdc4d7f4c9d0f87944ca8f0b1109a1cf96c1fb",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^11.11|^12.0|^13.0",
-                "php": "^8.2",
-                "ralphjsmit/laravel-helpers": "^1.10",
-                "spatie/laravel-package-tools": "^1.9.2"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.16",
-                "nesbot/carbon": "^3.0",
-                "nunomaduro/collision": "^8.0|^9.0",
-                "orchestra/testbench": "^9.16|^10.0|^11.0",
-                "orchestra/testbench-core": "^9.1.4|^10.0|^11.0",
-                "pestphp/pest": "^2.0|^3.0|^4.4",
-                "pestphp/pest-plugin-laravel": "^2.0|^3.0|^4.1",
-                "phpunit/phpunit": "^10.5|^11.5|^12.5.12",
-                "spatie/laravel-ray": "^1.39",
-                "spatie/pest-plugin-test-time": "^2.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "aliases": {
-                        "SEOManager": "RalphJSmit\\Laravel\\SEO\\Facades\\SEOManager"
-                    },
-                    "providers": [
-                        "RalphJSmit\\Laravel\\SEO\\LaravelSEOServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "RalphJSmit\\Laravel\\SEO\\": "src",
-                    "RalphJSmit\\Laravel\\SEO\\Database\\Factories\\": "database/factories"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ralph J. Smit",
-                    "email": "rjs@ralphjsmit.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A package to handle the SEO in any Laravel application, big or small.",
-            "homepage": "https://github.com/ralphjsmit/laravel-seo",
-            "keywords": [
-                "laravel",
-                "laravel-seo",
-                "ralphjsmit"
-            ],
-            "support": {
-                "issues": "https://github.com/ralphjsmit/laravel-seo/issues",
-                "source": "https://github.com/ralphjsmit/laravel-seo/tree/1.8.3"
-            },
-            "time": "2026-10-05T08:09:02+00:00"
-        },
-        {
             "name": "ramsey/collection",
             "version": "2.1.1",
             "source": {
@@ -5849,65 +5282,6 @@
             "time": "2022-12-17T21:53:22+00:00"
         },
         {
-            "name": "spatie/color",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/color.git",
-                "reference": "bcfe1840e32af163555a832dc6225f766a05f710"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/color/zipball/bcfe1840e32af163555a832dc6225f766a05f710",
-                "reference": "bcfe1840e32af163555a832dc6225f766a05f710",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.2"
-            },
-            "require-dev": {
-                "pestphp/pest": "^3.7",
-                "phpunit/phpunit": "^11.5"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\Color\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sebastian De Deyne",
-                    "email": "sebastian@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A little library to handle color conversions",
-            "homepage": "https://github.com/spatie/color",
-            "keywords": [
-                "color",
-                "conversion",
-                "rgb",
-                "spatie"
-            ],
-            "support": {
-                "issues": "https://github.com/spatie/color/issues",
-                "source": "https://github.com/spatie/color/tree/2.1.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/spatie",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-02-08T22:16:42+00:00"
-        },
-        {
             "name": "spatie/invade",
             "version": "2.1.1",
             "source": {
@@ -6028,80 +5402,6 @@
             "time": "2026-09-28T07:16:50+00:00"
         },
         {
-            "name": "spatie/laravel-route-attributes",
-            "version": "1.28.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-route-attributes.git",
-                "reference": "17cb15b40d31c0d7c3c9378948d3760135563020"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-route-attributes/zipball/17cb15b40d31c0d7c3c9378948d3760135563020",
-                "reference": "17cb15b40d31c0d7c3c9378948d3760135563020",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^11.0|^12.0|^13.0",
-                "nesbot/carbon": "^2.63|^3.0",
-                "php": "^8.3",
-                "spatie/php-attribute-reader": "^1.0"
-            },
-            "require-dev": {
-                "laravel/pint": "^1.25",
-                "orchestra/testbench": "^9.0|^10.0|^11.0",
-                "pestphp/pest": "^3.0|^4.0",
-                "pestphp/pest-plugin-laravel": "^3.0|^4.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Spatie\\RouteAttributes\\RouteAttributesServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\RouteAttributes\\": "src",
-                    "Spatie\\RouteAttributes\\Database\\Factories\\": "database/factories"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Auto register routes using PHP attributes",
-            "homepage": "https://github.com/spatie/laravel-route-attributes",
-            "keywords": [
-                "laravel-route-attributes",
-                "spatie"
-            ],
-            "support": {
-                "issues": "https://github.com/spatie/laravel-route-attributes/issues",
-                "source": "https://github.com/spatie/laravel-route-attributes/tree/1.28.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/spatie",
-                    "type": "github"
-                },
-                {
-                    "url": "https://spatie.be/open-source/support-us",
-                    "type": "other"
-                }
-            ],
-            "time": "2026-03-06T08:25:46+00:00"
-        },
-        {
             "name": "spatie/laravel-translatable",
             "version": "6.14.1",
             "source": {
@@ -6183,64 +5483,6 @@
                 }
             ],
             "time": "2026-04-23T08:26:29+00:00"
-        },
-        {
-            "name": "spatie/php-attribute-reader",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/php-attribute-reader.git",
-                "reference": "46e7484d7b51f5b22d672745c541e48c5a385404"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/php-attribute-reader/zipball/46e7484d7b51f5b22d672745c541e48c5a385404",
-                "reference": "46e7484d7b51f5b22d672745c541e48c5a385404",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "pestphp/pest": "^1.0|^2.0|^3.0|^4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\Attributes\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A clean API for working with PHP attributes",
-            "homepage": "https://github.com/spatie/php-attribute-reader",
-            "keywords": [
-                "attributes",
-                "php-attribute-reader",
-                "reflection",
-                "spatie"
-            ],
-            "support": {
-                "issues": "https://github.com/spatie/php-attribute-reader/issues",
-                "source": "https://github.com/spatie/php-attribute-reader/tree/1.1.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/spatie",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-02-23T09:01:55+00:00"
         },
         {
             "name": "spatie/shiki-php",
@@ -9220,90 +8462,6 @@
                 }
             ],
             "time": "2026-04-26T05:33:54+00:00"
-        },
-        {
-            "name": "voltra/filament-svg-avatar",
-            "version": "1.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Voltra/filament-svg-avatar.git",
-                "reference": "02ace92dea0e44475338619b2124e09736ef304a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Voltra/filament-svg-avatar/zipball/02ace92dea0e44475338619b2124e09736ef304a",
-                "reference": "02ace92dea0e44475338619b2124e09736ef304a",
-                "shasum": ""
-            },
-            "require": {
-                "filament/filament": "^3.0||^4.0||^5.0",
-                "illuminate/contracts": "^10.0||^11.0||^12.0||^13.0",
-                "php": "^8.2",
-                "spatie/color": "^1.3||^2.0",
-                "spatie/laravel-package-tools": "^1.15.0"
-            },
-            "require-dev": {
-                "larastan/larastan": "^2.9||^3.0",
-                "laravel/facade-documenter": "dev-main",
-                "laravel/pint": "^1.0",
-                "nunomaduro/collision": "^7.9||^8.0",
-                "orchestra/testbench": "^8.20||^9.2||^10.0||^11.0",
-                "pestphp/pest": "^2.30||^3.0||^4.0",
-                "pestphp/pest-plugin-arch": "^2.0||^3.0||^4.0",
-                "pestphp/pest-plugin-laravel": "^2.0||^3.0||^4.0",
-                "phpstan/extension-installer": "^1.1",
-                "phpstan/phpstan-deprecation-rules": "^1.0||^2.0",
-                "phpstan/phpstan-phpunit": "^1.0||^2.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "aliases": {
-                        "FilamentSvgAvatar": "Voltra\\FilamentSvgAvatar\\Facades\\FilamentSvgAvatar"
-                    },
-                    "providers": [
-                        "Voltra\\FilamentSvgAvatar\\FilamentSvgAvatarServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Voltra\\FilamentSvgAvatar\\": "src/",
-                    "Voltra\\FilamentSvgAvatar\\Database\\Factories\\": "database/factories/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Voltra",
-                    "email": "dev@ludwig-guerin.fr",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Change the default avatar url provider with one for inline SVGs",
-            "homepage": "https://github.com/voltra/filament-svg-avatar",
-            "keywords": [
-                "Voltra",
-                "avatar",
-                "filament",
-                "filament-svg-avatar",
-                "laravel",
-                "laravel-filament"
-            ],
-            "support": {
-                "issues": "https://github.com/voltra/filament-svg-avatar/issues",
-                "source": "https://github.com/voltra/filament-svg-avatar"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/Voltra",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-05-06T17:25:57+00:00"
         }
     ],
     "packages-dev": [
