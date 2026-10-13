@@ -34,8 +34,19 @@ class BookResource extends Resource
     {
         return $schema
             ->components([
+                TextInput::make('title')
+                    ->required()
+                    ->helperText('this field is translatable')
+                    ->columnSpanFull(),
+
+                FileUpload::make('cover')
+                    ->required()
+                    ->helperText('this field is translatable')
+                    ->disk('public')
+                    ->image(),
+
                 // for demo, use CheckboxList with local switcher
-                CheckboxList::make('marineVehiclePackage')
+                /*CheckboxList::make('marineVehiclePackage')
                     ->dehydrated(false)
                     ->columnSpanFull()
                     ->columns(4)
@@ -49,26 +60,24 @@ class BookResource extends Resource
 
                 TextInput::make('title')
                     ->required()
-                    ->columnSpanFull(),
-                FileUpload::make('cover')
-//                    ->required()
-                        ->disk('public')
-                    ->image(),
+                    ->columnSpanFull(),*/
+
                 Repeater::make('authors')
+                    ->helperText('this field is translatable')
                     ->collapsed(false)
                     ->collapsible(false)
                     ->schema([
                         TextInput::make('name'),
                     ]),
 
-                Section::make('JSON fields')
+                /*Section::make('JSON fields')
                     ->schema([
                         TextInput::make('json_fields.summary')
                             ->columnSpan(12),
                         DatePicker::make('json_fields.summary_date')
                             ->columnSpan(3),
                     ])
-                    ->columns(12),
+                    ->columns(12),*/
 
             ]);
     }
